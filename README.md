@@ -1,7 +1,7 @@
 # Instagram-AutoDM-Script Workflow
 
-## Initial Setup
 
+## Initial Setup
 ### Pre-Visual Studio Code
 1. Download and use [VSCode](https://code.visualstudio.com/download) for development.
 
@@ -20,7 +20,7 @@
     In order to verify if you entered these correctly you can run:
 
     ```
-    $ git config --list | grep user.*
+    git config --list | grep user.*
     ```
 
 4. Clone the repository (which downloads a local copy of the project to your computer):
@@ -30,64 +30,68 @@
     ```
 
 
-5. You will need to download all dependencies:
+5. You will need to download all dependencies
 
-## Regular Development Workflow
+## Development Quick Start:
+###
+1. #### Checkout and create a branch.
 
-1. Switch to the main branch and pull the latest changes:
+    Terminal Input:
     ```
-    git switch main
-    git pull
+    git checkout -b <Branch_Name>
+    git push origin <Branch_Name>
     ```
+    This will create a new branch locally then push it to the remote repository.
+2. #### Code!
 
-2. Create a new feature branch:
-    ```
-    git checkout -b "<Insert_name_of_feature_branch_here>"
-    ```
+    Make all relevant code changes, test and make sure everything works!
 
-3. Make changes and stage them for commit:
-    #### To stage **specific** files
-    ```
-    git add <file_to_track>
-    ```
+3. #### Add all files to your current branch.
 
-    #### To stage **all** changes
+    Terminal Input:
     ```
     git add --all
     ```
+    This will stage all files in the present working directory for commitment to the remote repository
+4. #### Commit all changes.
 
-4. Commit your changes with a descriptive message:
+    Terminal Input:
     ```
-    git commit -m "Message describing the changes you made in the commit"
+    git commit -m "<Commit Message>"
     ```
+    This will stage the commit for pushing to the remote repository.
+5. #### Push all commits.
+   **Note: If it's your first time pushing, follow the recommended command if prompted.**
 
-5. Push your feature branch to the remote repository:
-    #### **Note: If it's your first time pushing, follow the recommended command if prompted**
-    ```
-    git push
-    ```
 
-## Do When You Are Ready To Merge Changes
+   Terminal Input:
+   ``` 
+   git push origin <Branch_Name>
+   ```
+   This will push the local committed changes to the remote repository.
 
-1. Create a Pull Request (PR) on GitHub and assign a team member for review.
-
-2. After approval, ensure your feature branch is up to date with main using rebase:
+6. #### Rebase main upon Pull Request Approval
+   
+    Terminal Input:
     ```
     git switch main
     git pull
-    git switch "<Insert_name_of_feature_branch_here>"
+    git switch <Insert_name_of_feature_branch_here>
     git rebase main
     ```
+    This will switch to your local 'main' branch and pull all changes. This will then switch to the branch you've been working on and graft it's changes on top of the newly updated main branch. (Manual input may and often will be required!)
+   
+7. #### Merge with main in Github.
+    Once you've rebased and your branches are in-sync, merge the Pull Request (PR) into the 'main' branch in Github (There should be a big green merge button.)
 
-3. Resolve any conflicts, if needed, during rebase.
-
-4. Once in sync, merge the PR into the main branch in Github (should be a big green merge button)
-
-5. Once you merge you should update your local main branch
+8. #### Update local main branch
+    
+    Terminal Input:
     ```
     git switch main
     git pull
     ```
+    This will switch your current branch to the local 'main' branch and then this will pull from the 'main' branch on the remote repository.
 
 ## Misc. Tips
 
