@@ -63,14 +63,26 @@
 5. #### Push all commits.
    **Note: If it's your first time pushing, follow the recommended command if prompted.**
 
-
    Terminal Input:
    ``` 
    git push origin <Branch_Name>
    ```
    This will push the local committed changes to the remote repository.
 
-6. #### Rebase main upon Pull Request Approval
+6. #### Create a Pull Request (PR) in Github.
+    <p align="center">
+        <img src="images/README%20images/PullRequestCreate1.gif" alt="Pull Request Create Step 1">
+        <em>Starting a Pull Request and Selecting the Branch</em>
+    </p>
+    </br>
+
+    <p align="center">
+        <img src="images/README%20images/PullRequestCreate2.gif" alt="Pull Request Create Step 2">
+        <em>Viewing Code Changes, Adding a Description, and Assigning Reviewers </em>
+    </p>
+
+7. #### Rebase main upon Pull Request Approval 
+   **Note: This will only be necessary when multiple people are working on multiple features and things are update while you're working on your branch**
    
     Terminal Input:
     ```
@@ -81,10 +93,17 @@
     ```
     This will switch to your local 'main' branch and pull all changes. This will then switch to the branch you've been working on and graft it's changes on top of the newly updated main branch. (Manual input may and often will be required!)
    
-7. #### Merge with main in Github.
+8. #### Merge with main in Github.
     Once you've rebased and your branches are in-sync, merge the Pull Request (PR) into the 'main' branch in Github (There should be a big green merge button.)
+    
+    <p align="center">
+        <img src="images/README%20images/PullRequestCreate3.gif" alt="Pull Request Create Step 3">
+        <em>Merging a Pull Request</em>
+    </p>
+    
+    
 
-8. #### Update local main branch
+3.  #### Update local main branch
     
     Terminal Input:
     ```
